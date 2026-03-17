@@ -564,6 +564,134 @@
     border-radius: 2px;
   }
 
+  /* ── TEAM ── */
+  .team-wrap {
+    background: var(--midnight);
+    border-top: 1px solid rgba(24,95,165,0.15);
+  }
+
+  .team-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+    background: var(--midnight-surface);
+    max-width: 900px;
+  }
+
+  .team-photo-col {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+  }
+
+  .team-photo-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%) contrast(1.05);
+  }
+
+  .team-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, var(--midnight-surface));
+  }
+
+  .team-photo-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 60px;
+    background: var(--signal);
+  }
+
+  .team-bio-col {
+    padding: 3rem 3rem 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--mist);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+  }
+
+  .team-role {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--signal);
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+  }
+
+  .team-bio {
+    font-size: 0.83rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .team-bio + .team-bio { margin-top: 0; }
+
+  .team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .team-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--clarity);
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(133,183,235,0.20);
+    border-radius: 2px;
+  }
+
+  .team-venture {
+    margin-top: 1.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(24,95,165,0.20);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .team-venture-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .team-venture-value {
+    font-size: 0.78rem;
+    color: var(--clarity);
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    .team-card { grid-template-columns: 1fr; }
+    .team-photo-col { min-height: 300px; }
+    .team-photo-overlay { background: linear-gradient(to top, var(--midnight-surface) 5%, transparent); }
+    .team-bio-col { padding: 2rem 1.5rem; }
+  }
+
   /* ── BOOKING ── */
   .booking-wrap {
     background: var(--midnight-surface);
@@ -826,6 +954,7 @@
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#equipo">Equipo</a></li>
     <li><a href="#reserva">Reserva tu cita</a></li>
     <li><a href="#contacto" class="nav-cta">Contacto</a></li>
   </ul>
@@ -927,6 +1056,40 @@
         </div>
       </div>
 
+    </div>
+  </section>
+</div>
+
+<!-- ── TEAM ── -->
+<div class="team-wrap" id="equipo">
+  <section class="section">
+    <p class="section-label">Nuestro equipo</p>
+    <h2 class="section-title" style="margin-bottom:2.5rem">La persona detrás<br>de <em>Equilibrium</em></h2>
+
+    <div class="team-card">
+      <div class="team-photo-col">
+        <img src="images/Victor.jpeg" alt="Víctor Ibáñez — Founder & Strategic Advisor">
+        <div class="team-photo-overlay"></div>
+        <div class="team-photo-accent"></div>
+      </div>
+      <div class="team-bio-col">
+        <h3 class="team-name">Víctor Ibáñez</h3>
+        <p class="team-role">Founder &amp; Strategic Advisor · Equilibrium Ventures</p>
+        <p class="team-bio">Emprendedor con 26 años y una trayectoria que demuestra que la claridad estratégica no se mide en décadas. Desde el inicio de su carrera ha ocupado posiciones de liderazgo ejecutivo y gobierno corporativo, desarrollando un conocimiento transversal que aplica directamente con los founders que trabajan con Equilibrium Ventures.</p>
+        <p class="team-bio" style="margin-top:0.9rem">En 2023 cofundó TicketGo OÜ, un marketplace turístico donde ejerce como socio fundador y miembro de la junta directiva. Construir una empresa operativa desde cero define su enfoque como asesor: práctico, directo y orientado a resultados concretos.</p>
+        <div class="team-tags">
+          <span class="team-tag">Estrategia</span>
+          <span class="team-tag">Marketing</span>
+          <span class="team-tag">Finanzas</span>
+          <span class="team-tag">Gobernanza corporativa</span>
+          <span class="team-tag">Recursos humanos</span>
+          <span class="team-tag">Operaciones</span>
+        </div>
+        <div class="team-venture">
+          <span class="team-venture-label">Co-fundador de</span>
+          <span class="team-venture-value">TicketGo OÜ · Marketplace turístico · 2023</span>
+        </div>
+      </div>
     </div>
   </section>
 </div>
