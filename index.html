@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equilibrium Ventures · Asesoría Empresarial</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy:      #2f3264;
+    --navy-dark: #1d2050;
+    --navy-mid:  #4a4d7a;
+    --navy-soft: #8587ad;
+    --gold:      #f0e49a;
+    --gold-dark: #d4c45a;
+    --lavender:  #d4deff;
+    --lav-light: #eaefff;
+    --cream:     #f8f7f4;
+    --white:     #ffffff;
+    --text-dark: #1a1c3d;
+    --text-mid:  #4a4d7a;
+    --text-soft: #8587ad;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(248,247,244,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(47,50,100,0.1);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logo-main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+
+  .logo-sub {
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--navy-soft);
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    display: inline-block;
+    padding: 0.55rem 1.4rem;
+    background: var(--navy);
+    color: var(--cream) !important;
+    border-radius: 2px;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--navy-dark) !important; color: var(--cream) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 7rem 2rem 4rem;
+    background: var(--navy-dark);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 60%, rgba(212,222,255,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 25%, rgba(240,228,154,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 100%, rgba(47,50,100,0.6) 0%, transparent 60%);
+  }
+
+  /* geometric logo icon — CSS-drawn triangle */
+  .hero-icon {
+    position: relative;
+    width: 72px;
+    height: 62px;
+    margin-bottom: 2.5rem;
+    z-index: 1;
+  }
+
+  .hero-icon svg { width: 72px; height: 62px; }
+
+  .hero-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--cream);
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    color: var(--lavender);
+    opacity: 0.6;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    border: 1px solid rgba(212,222,255,0.4);
+    color: var(--lavender);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(212,222,255,0.08);
+    border-color: var(--lavender);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 6rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: var(--navy-dark);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--navy-mid);
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold-dark);
+    margin: 1.8rem 0;
+  }
+
+  /* ── SERVICES ── */
+  .services-intro {
+    max-width: 580px;
+    margin-bottom: 4rem;
+  }
+
+  .services-intro p {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: rgba(47,50,100,0.1);
+  }
+
+  .service-card {
+    background: var(--cream);
+    padding: 2.8rem 2.5rem;
+    transition: background 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--gold-dark);
+    transition: height 0.4s ease;
+  }
+
+  .service-card:hover { background: var(--white); }
+  .service-card:hover::before { height: 100%; }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1.5rem;
+    color: var(--navy-mid);
+  }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--lavender);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .service-desc {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* ── ABOUT ── */
+  .about-wrap {
+    background: var(--lav-light);
+    border-top: 1px solid rgba(47,50,100,0.08);
+    border-bottom: 1px solid rgba(47,50,100,0.08);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-card {
+    background: var(--navy-dark);
+    padding: 3.5rem;
+    color: var(--cream);
+    position: relative;
+  }
+
+  .about-card-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    opacity: 0.6;
+    margin-bottom: 1rem;
+  }
+
+  .about-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-card-text {
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: var(--lavender);
+    opacity: 0.7;
+    font-weight: 300;
+  }
+
+  .about-card-accent {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    width: 80px;
+    height: 80px;
+    background: var(--gold);
+    opacity: 0.9;
+  }
+
+  .about-text p {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  .about-text p + p { margin-top: 1.2rem; }
+
+  .stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy-soft);
+    margin-top: 0.3rem;
+  }
+
+  /* ── CONTACT ── */
+  .contact-wrap {
+    background: var(--navy-dark);
+    border-top: 1px solid rgba(212,222,255,0.06);
+  }
+
+  .contact-wrap .section-label { color: var(--lavender); opacity: 0.6; }
+  .contact-wrap .section-title { color: var(--cream); }
+  .contact-wrap .section-title em { color: var(--gold); }
+  .contact-wrap .divider { background: var(--gold-dark); opacity: 0.7; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-info p {
+    font-size: 0.82rem;
+    line-height: 1.9;
+    color: var(--lavender);
+    opacity: 0.6;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    opacity: 0.5;
+  }
+
+  .detail-value {
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  /* ── FORM ── */
+  .form-group { margin-bottom: 1.5rem; }
+
+  .form-label {
+    display: block;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    opacity: 0.5;
+    margin-bottom: 0.6rem;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(212,222,255,0.2);
+    padding: 0.7rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--cream);
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-select { cursor: pointer; color: rgba(212,222,255,0.4); }
+  .form-select option { background: #1d2050; color: var(--cream); }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: rgba(212,222,255,0.25); }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    border-bottom-color: var(--gold);
+    color: var(--cream);
+  }
+
+  .form-textarea { resize: none; height: 100px; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+  }
+
+  .success-msg {
+    display: none;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(240,228,154,0.35);
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    border-radius: 2px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 2.5rem 3rem;
+    background: var(--navy-dark);
+    border-top: 1px solid rgba(212,222,255,0.06);
+  }
+
+  footer p {
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(212,222,255,0.25);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .section { padding: 4rem 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .stats { gap: 1.8rem; }
+    .hero-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <div class="logo">
+    <span class="logo-main">Equilibrium</span>
+    <span class="logo-sub">Ventures</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <!-- geometric icon (matches logo triangle) -->
+  <div class="hero-icon">
+    <svg viewBox="0 0 72 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="36,2 70,60 2,60" fill="none" stroke="rgba(212,222,255,0.18)" stroke-width="1.5"/>
+      <polygon points="36,14 62,58 10,58" fill="rgba(47,50,100,0.6)"/>
+      <polygon points="48,36 65,58 36,46" fill="#f0e49a" opacity="0.85"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">Asesoría Empresarial · Holding</p>
+  <h1 class="hero-title">El impulso que tu<br>negocio <em>necesita</em></h1>
+  <p class="hero-sub">Estrategia · Finanzas · Organización · Crecimiento</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="#servicios">Ver servicios</a>
+    <a class="btn-secondary" href="#contacto">Hablar con nosotros</a>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section" id="servicios">
+  <p class="section-label">Servicios</p>
+  <h2 class="section-title">Lo que hacemos<br><em>por tu empresa</em></h2>
+
+  <div class="services-intro">
+    <p>Acompañamos a pequeñas empresas y autónomos en cada etapa de su desarrollo. Desde la definición de estrategia hasta la optimización operativa, ponemos a tu disposición el conocimiento y las herramientas de una gran empresa.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <h3 class="service-title">Estrategia Empresarial</h3>
+      <p class="service-desc">Diseñamos el rumbo de tu negocio. Analizamos tu mercado, identificamos oportunidades y construimos un plan de acción claro y realista para alcanzar tus objetivos.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <h3 class="service-title">Planificación Financiera</h3>
+      <p class="service-desc">Ordena tus finanzas y toma decisiones con seguridad. Te ayudamos con presupuestos, control de costes, flujo de caja y la planificación necesaria para crecer con solidez.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <h3 class="service-title">Gestión y Organización</h3>
+      <p class="service-desc">Implementamos sistemas y procesos que te permiten trabajar de forma más eficiente. Desde la estructura interna hasta la gestión del equipo y los recursos.</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <h3 class="service-title">Desarrollo de Negocio</h3>
+      <p class="service-desc">Abrimos nuevas vías de ingresos y mercados. Identificamos alianzas, canales de venta y modelos de negocio que potencien tu crecimiento a largo plazo.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<div class="about-wrap" id="nosotros">
+  <section class="section">
+    <div class="about-grid">
+
+      <div class="about-visual">
+        <div class="about-card">
+          <p class="about-card-label">Nuestra filosofía</p>
+          <h3 class="about-card-title">Equilibrio entre visión y ejecución</h3>
+          <p class="about-card-text">Creemos que toda empresa, sin importar su tamaño, merece acceder a asesoría de calidad. Nuestro enfoque combina el rigor analítico con la cercanía y la practicidad que los pequeños negocios realmente necesitan.</p>
+          <div class="about-card-accent"></div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="section-label">Nosotros</p>
+        <h2 class="section-title" style="margin-bottom:1rem">Una holding al<br><em>servicio de tu éxito</em></h2>
+        <div class="divider"></div>
+        <p>Equilibrium Ventures es una empresa holding especializada en asesoría para pequeñas empresas y autónomos. Nacemos con el objetivo de democratizar el acceso a consultoría estratégica de alto nivel, ofreciendo soluciones adaptadas a la realidad de cada negocio.</p>
+        <p>Nuestro equipo multidisciplinar combina experiencia en finanzas, gestión empresarial y desarrollo de negocio para ofrecer una visión integral, práctica y orientada a resultados tangibles.</p>
+        <div class="stats">
+          <div>
+            <div class="stat-num">+50</div>
+            <div class="stat-label">Empresas asesoradas</div>
+          </div>
+          <div>
+            <div class="stat-num">360°</div>
+            <div class="stat-label">Visión empresarial</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Orientado a resultados</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ── CONTACT ── -->
+<div class="contact-wrap" id="contacto">
+  <section class="section">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Hablemos de<br><em>tu negocio</em></h2>
+        <div class="divider"></div>
+        <p>Cuéntanos en qué punto está tu empresa y qué quieres conseguir. La primera consulta es sin compromiso.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">equilibriumventures@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-input" type="text" placeholder="Tu nombre" id="nombre">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="tu@email.com" id="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tipo de consulta</label>
+          <select class="form-select" id="tipo">
+            <option value="" disabled selected>Selecciona...</option>
+            <option>Estrategia empresarial</option>
+            <option>Planificación financiera</option>
+            <option>Gestión y organización</option>
+            <option>Desarrollo de negocio</option>
+            <option>Consulta general</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-textarea" placeholder="Cuéntanos sobre tu empresa, tus retos y lo que buscas conseguir..." id="mensaje"></textarea>
+        </div>
+        <button class="btn-submit" onclick="enviarFormulario()">
+          Enviar consulta <span>→</span>
+        </button>
+        <div class="success-msg" id="success">
+          Mensaje recibido — nos pondremos en contacto contigo en breve.
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>© 2026 Equilibrium Ventures · Todos los derechos reservados</p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  function enviarFormulario() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+    if (!nombre || !email || !mensaje) {
+      alert('Por favor, rellena los campos obligatorios.');
+      return;
+    }
+    document.getElementById('success').style.display = 'block';
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('tipo').value = '';
+    document.getElementById('mensaje').value = '';
+  }
+</script>
+
+</body>
+</html>
