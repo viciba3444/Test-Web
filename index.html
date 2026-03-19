@@ -19,14 +19,18 @@
     --clarity:          #85B7EB;
     --mist:             #F0F4FA;
     --white:            #ffffff;
-    --text-primary:     #F0F4FA;
-    --text-secondary:   #85B7EB;
-    --text-muted:       #4A7BAF;
+    /* Light mode tokens */
+    --page-bg:          #F8FAFD;
+    --surface:          #FFFFFF;
+    --surface-alt:      #EEF3FA;
+    --text-primary:     #0A1628;
+    --text-secondary:   #2E5A8A;
+    --text-muted:       #5A7FA8;
   }
 
   body {
     font-family: 'Inter', sans-serif;
-    background: var(--midnight);
+    background: var(--page-bg);
     color: var(--text-primary);
     overflow-x: hidden;
   }
@@ -40,9 +44,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 3rem;
-    background: rgba(10,22,40,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(24,95,165,0.15);
+    border-bottom: 1px solid rgba(24,95,165,0.12);
   }
 
   .logo {
@@ -56,7 +60,7 @@
     font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.18em;
-    color: var(--mist);
+    color: var(--midnight);
     text-transform: uppercase;
   }
 
@@ -78,13 +82,13 @@
     font-size: 0.68rem;
     letter-spacing: 0.20em;
     text-transform: uppercase;
-    color: var(--clarity);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s;
     font-weight: 500;
   }
 
-  .nav-links a:hover { color: var(--mist); }
+  .nav-links a:hover { color: var(--midnight); }
 
   .nav-cta {
     display: inline-block;
@@ -245,7 +249,7 @@
     font-weight: 500;
     letter-spacing: 0.01em;
     margin-bottom: 3rem;
-    color: var(--mist);
+    color: var(--midnight);
   }
 
   .section-title em {
@@ -277,11 +281,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5px;
-    background: rgba(24,95,165,0.20);
+    background: rgba(24,95,165,0.10);
   }
 
   .service-card {
-    background: var(--midnight-surface);
+    background: var(--surface);
     padding: 2.8rem 2.5rem;
     transition: background 0.3s;
     cursor: default;
@@ -299,7 +303,7 @@
     transition: height 0.4s ease;
   }
 
-  .service-card:hover { background: var(--midnight); }
+  .service-card:hover { background: var(--surface-alt); }
   .service-card:hover::before { height: 100%; }
 
   .service-num {
@@ -317,7 +321,7 @@
     font-size: 1.4rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    color: var(--mist);
+    color: var(--midnight);
     margin-bottom: 0.8rem;
   }
 
@@ -330,9 +334,9 @@
 
   /* ── ABOUT ── */
   .about-wrap {
-    background: var(--midnight-surface);
-    border-top: 1px solid rgba(24,95,165,0.15);
-    border-bottom: 1px solid rgba(24,95,165,0.15);
+    background: var(--surface-alt);
+    border-top: 1px solid rgba(24,95,165,0.10);
+    border-bottom: 1px solid rgba(24,95,165,0.10);
   }
 
   .about-grid {
@@ -396,6 +400,8 @@
     color: var(--text-secondary);
     font-weight: 400;
   }
+
+  .about-text .section-title { color: var(--midnight); }
 
   .about-text p + p { margin-top: 1.2rem; }
 
@@ -566,16 +572,17 @@
 
   /* ── TEAM ── */
   .team-wrap {
-    background: var(--midnight);
-    border-top: 1px solid rgba(24,95,165,0.15);
+    background: var(--surface);
+    border-top: 1px solid rgba(24,95,165,0.10);
   }
 
   .team-card {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 0;
-    background: var(--midnight-surface);
+    background: var(--surface-alt);
     max-width: 900px;
+    box-shadow: 0 4px 32px rgba(24,95,165,0.08);
   }
 
   .team-photo-col {
@@ -596,7 +603,7 @@
   .team-photo-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, transparent 60%, var(--midnight-surface));
+    background: linear-gradient(to right, transparent 60%, var(--surface-alt));
   }
 
   .team-photo-accent {
@@ -620,7 +627,7 @@
     font-size: 2.2rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    color: var(--mist);
+    color: var(--midnight);
     line-height: 1.1;
     margin-bottom: 0.4rem;
   }
@@ -644,6 +651,8 @@
 
   .team-bio + .team-bio { margin-top: 0; }
 
+  .team-bio-col .team-name { color: var(--midnight); }
+
   .team-tags {
     display: flex;
     flex-wrap: wrap;
@@ -656,16 +665,16 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--clarity);
+    color: var(--blueprint);
     padding: 0.3rem 0.8rem;
-    border: 1px solid rgba(133,183,235,0.20);
+    border: 1px solid rgba(24,95,165,0.20);
     border-radius: 2px;
   }
 
   .team-venture {
     margin-top: 1.8rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(24,95,165,0.20);
+    border-top: 1px solid rgba(24,95,165,0.12);
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -681,21 +690,21 @@
 
   .team-venture-value {
     font-size: 0.78rem;
-    color: var(--clarity);
+    color: var(--blueprint);
     font-weight: 400;
   }
 
   @media (max-width: 768px) {
     .team-card { grid-template-columns: 1fr; }
     .team-photo-col { min-height: 300px; }
-    .team-photo-overlay { background: linear-gradient(to top, var(--midnight-surface) 5%, transparent); }
+    .team-photo-overlay { background: linear-gradient(to top, var(--surface-alt) 5%, transparent); }
     .team-bio-col { padding: 2rem 1.5rem; }
   }
 
   /* ── BOOKING ── */
   .booking-wrap {
-    background: var(--midnight-surface);
-    border-top: 1px solid rgba(24,95,165,0.15);
+    background: var(--surface-alt);
+    border-top: 1px solid rgba(24,95,165,0.10);
   }
 
   .booking-grid {
@@ -717,8 +726,8 @@
     align-items: center;
     gap: 1.2rem;
     padding: 1.2rem 1.5rem;
-    background: var(--midnight);
-    border: 1px solid rgba(133,183,235,0.10);
+    background: var(--surface);
+    border: 1px solid rgba(24,95,165,0.12);
     border-radius: 2px;
     cursor: pointer;
     transition: border-color 0.3s, background 0.3s;
@@ -748,7 +757,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 0.88rem;
     font-weight: 500;
-    color: var(--mist);
+    color: var(--midnight);
     margin-bottom: 0.2rem;
   }
 
@@ -803,7 +812,8 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-    background: rgba(24,95,165,0.20);
+    background: rgba(24,95,165,0.10);
+    box-shadow: 0 4px 32px rgba(24,95,165,0.08);
   }
 
   .booking-cal-header {
@@ -834,7 +844,7 @@
   }
 
   .booking-cal-grid {
-    background: var(--midnight);
+    background: var(--surface);
     padding: 1.2rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -864,15 +874,15 @@
     font-weight: 400;
   }
 
-  .cal-day:hover { background: rgba(55,138,221,0.15); color: var(--mist); }
-  .cal-day.available { color: var(--mist); }
+  .cal-day:hover { background: rgba(55,138,221,0.12); color: var(--midnight); }
+  .cal-day.available { color: var(--midnight); }
   .cal-day.selected-day { background: var(--signal); color: var(--mist); }
   .cal-day.today { border: 1px solid rgba(133,183,235,0.30); }
   .cal-day.empty { cursor: default; }
   .cal-day.empty:hover { background: none; }
 
   .booking-slots {
-    background: var(--midnight-surface);
+    background: var(--surface-alt);
     padding: 1.2rem 1.5rem;
   }
 
@@ -1159,7 +1169,7 @@
         <p class="section-label">Agenda</p>
         <h2 class="section-title">Reserva<br>tu <em>cita</em></h2>
         <div class="divider"></div>
-        <p style="font-size:0.85rem;line-height:1.9;color:var(--text-secondary);font-weight:400;max-width:420px">
+        <p style="font-size:0.85rem;line-height:1.9;color:var(--text-secondary);font-weight:400;max-width:420px;color:var(--text-secondary)">
           Elige el tipo de sesión que mejor se adapta a tu situación. La primera llamada de diagnóstico es gratuita y sin compromiso.
         </p>
 
