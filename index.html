@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equilibrium Ventures · Strategic Advisory</title>
+<title>Equilibrium Ventures | Consultoría, SEO, SEM y desarrollo web para negocios</title>
+<meta name="description" content="Consultoría estratégica, SEO, SEM, desarrollo web y automatización para pequeñas empresas y emprendedores. Reserva una consulta gratuita de 15 minutos.">
+<link rel="canonical" href="https://equilibriumventures.com/">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -74,13 +76,13 @@
 
   .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
   }
 
   .nav-links a {
-    font-size: 0.68rem;
-    letter-spacing: 0.20em;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-secondary);
     text-decoration: none;
@@ -110,7 +112,7 @@
     flex-direction: column;
     text-align: center;
     position: relative;
-    padding: 7rem 2rem 4rem;
+    padding: 7rem 2rem 5rem;
     background: var(--midnight);
     overflow: hidden;
   }
@@ -147,15 +149,15 @@
 
   .hero-title {
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
     font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: 0.02em;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
     margin-bottom: 1.5rem;
     color: var(--mist);
     position: relative;
     z-index: 1;
-    max-width: 820px;
+    max-width: 900px;
   }
 
   .hero-title em {
@@ -164,14 +166,14 @@
   }
 
   .hero-sub {
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--clarity);
-    text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
     position: relative;
     z-index: 1;
     font-weight: 400;
+    max-width: 620px;
   }
 
   .hero-btns {
@@ -264,10 +266,47 @@
     margin: 1.8rem 0;
   }
 
+  /* ── PROBLEMS ── */
+  .problems-wrap {
+    background: var(--surface-alt);
+    border-top: 1px solid rgba(24,95,165,0.10);
+    border-bottom: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: rgba(24,95,165,0.10);
+    margin-top: 2.5rem;
+  }
+
+  .problem-item {
+    background: var(--surface);
+    padding: 2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .problem-icon {
+    font-size: 1rem;
+    color: var(--signal);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .problem-text {
+    font-size: 0.84rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
   /* ── SERVICES ── */
   .services-intro {
-    max-width: 580px;
-    margin-bottom: 4rem;
+    max-width: 620px;
+    margin-bottom: 3rem;
   }
 
   .services-intro p {
@@ -286,7 +325,7 @@
 
   .service-card {
     background: var(--surface);
-    padding: 2.8rem 2.5rem;
+    padding: 2.2rem 2.2rem;
     transition: background 0.3s;
     cursor: default;
     position: relative;
@@ -311,18 +350,18 @@
     font-size: 1rem;
     color: var(--blueprint);
     letter-spacing: 0.10em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     display: block;
     font-weight: 400;
   }
 
   .service-title {
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 0.01em;
     color: var(--midnight);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 
   .service-desc {
@@ -330,6 +369,192 @@
     line-height: 1.8;
     color: var(--text-secondary);
     font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+
+  .service-benefit {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--signal);
+    font-weight: 500;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(24,95,165,0.08);
+  }
+
+  .services-cta {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── PROCESS ── */
+  .process-wrap {
+    background: var(--surface);
+    border-top: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5px;
+    background: rgba(24,95,165,0.10);
+    margin-top: 2.5rem;
+  }
+
+  .step {
+    background: var(--page-bg);
+    padding: 2.5rem 2rem;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgba(55,138,221,0.12);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--midnight);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  .step-desc {
+    font-size: 0.78rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  /* ── PRICING ── */
+  .pricing-wrap {
+    background: var(--surface-alt);
+    border-top: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .pricing-card {
+    background: var(--surface);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(24,95,165,0.10);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pricing-card.featured {
+    background: var(--blueprint);
+    border-color: var(--blueprint);
+  }
+
+  .pricing-badge {
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing-card.featured .pricing-badge { color: var(--clarity); }
+
+  .pricing-price {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--midnight);
+    line-height: 1;
+  }
+
+  .pricing-card.featured .pricing-price { color: var(--mist); }
+
+  .pricing-unit {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+  }
+
+  .pricing-card.featured .pricing-unit { color: var(--clarity); }
+
+  .pricing-desc {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-card.featured .pricing-desc { color: var(--mist); opacity: 0.85; }
+
+  /* ── FAQ ── */
+  .faq-wrap {
+    background: var(--surface);
+    border-top: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin-top: 2.5rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .faq-question {
+    padding: 1.3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+    user-select: none;
+  }
+
+  .faq-question-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--midnight);
+    line-height: 1.4;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+    color: var(--signal);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    font-weight: 300;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  .faq-answer-inner {
+    padding-bottom: 1.3rem;
+    font-size: 0.84rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
   }
 
   /* ── ABOUT ── */
@@ -344,10 +569,6 @@
     grid-template-columns: 1fr 1.1fr;
     gap: 5rem;
     align-items: center;
-  }
-
-  .about-visual {
-    position: relative;
   }
 
   .about-card {
@@ -405,29 +626,150 @@
 
   .about-text p + p { margin-top: 1.2rem; }
 
-  .stats {
+  .differentials {
     display: flex;
-    gap: 2.5rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.8rem;
   }
 
-  .stat-num {
+  .differential-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .differential-item::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: var(--signal);
+    flex-shrink: 0;
+  }
+
+  /* ── TEAM ── */
+  .team-wrap {
+    background: var(--surface);
+    border-top: 1px solid rgba(24,95,165,0.10);
+  }
+
+  .team-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+    background: var(--surface-alt);
+    max-width: 900px;
+    box-shadow: 0 4px 32px rgba(24,95,165,0.08);
+  }
+
+  .team-photo-col {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+  }
+
+  .team-photo-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%) contrast(1.05);
+  }
+
+  .team-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, var(--surface-alt));
+  }
+
+  .team-photo-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 60px;
+    background: var(--signal);
+  }
+
+  .team-bio-col {
+    padding: 3rem 3rem 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .team-name {
     font-family: 'DM Sans', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 400;
+    font-size: 2.2rem;
+    font-weight: 500;
     letter-spacing: 0.01em;
-    color: var(--signal);
-    line-height: 1;
+    color: var(--midnight);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
   }
 
-  .stat-label {
+  .team-role {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--signal);
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+  }
+
+  .team-bio {
+    font-size: 0.83rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .team-bio + .team-bio { margin-top: 0; }
+  .team-bio-col .team-name { color: var(--midnight); }
+
+  .team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .team-tag {
     font-size: 0.58rem;
-    letter-spacing: 0.20em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--blueprint);
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(24,95,165,0.20);
+    border-radius: 2px;
+  }
+
+  .team-venture {
+    margin-top: 1.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(24,95,165,0.12);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .team-venture-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-top: 0.3rem;
     font-weight: 500;
+  }
+
+  .team-venture-value {
+    font-size: 0.78rem;
+    color: var(--blueprint);
+    font-weight: 400;
   }
 
   /* ── CONTACT ── */
@@ -570,137 +912,6 @@
     border-radius: 2px;
   }
 
-  /* ── TEAM ── */
-  .team-wrap {
-    background: var(--surface);
-    border-top: 1px solid rgba(24,95,165,0.10);
-  }
-
-  .team-card {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 0;
-    background: var(--surface-alt);
-    max-width: 900px;
-    box-shadow: 0 4px 32px rgba(24,95,165,0.08);
-  }
-
-  .team-photo-col {
-    position: relative;
-    overflow: hidden;
-    min-height: 480px;
-  }
-
-  .team-photo-col img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    filter: grayscale(20%) contrast(1.05);
-  }
-
-  .team-photo-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, transparent 60%, var(--surface-alt));
-  }
-
-  .team-photo-accent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 60px;
-    background: var(--signal);
-  }
-
-  .team-bio-col {
-    padding: 3rem 3rem 3rem 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .team-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    color: var(--midnight);
-    line-height: 1.1;
-    margin-bottom: 0.4rem;
-  }
-
-  .team-role {
-    font-size: 0.65rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--signal);
-    font-weight: 500;
-    margin-bottom: 1.8rem;
-  }
-
-  .team-bio {
-    font-size: 0.83rem;
-    line-height: 1.9;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  .team-bio + .team-bio { margin-top: 0; }
-
-  .team-bio-col .team-name { color: var(--midnight); }
-
-  .team-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.8rem;
-  }
-
-  .team-tag {
-    font-size: 0.58rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--blueprint);
-    padding: 0.3rem 0.8rem;
-    border: 1px solid rgba(24,95,165,0.20);
-    border-radius: 2px;
-  }
-
-  .team-venture {
-    margin-top: 1.8rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(24,95,165,0.12);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-
-  .team-venture-label {
-    font-size: 0.58rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
-
-  .team-venture-value {
-    font-size: 0.78rem;
-    color: var(--blueprint);
-    font-weight: 400;
-  }
-
-  @media (max-width: 768px) {
-    .team-card { grid-template-columns: 1fr; }
-    .team-photo-col { min-height: 300px; }
-    .team-photo-overlay { background: linear-gradient(to top, var(--surface-alt) 5%, transparent); }
-    .team-bio-col { padding: 2rem 1.5rem; }
-  }
-
   /* ── BOOKING ── */
   .booking-wrap {
     background: var(--surface-alt);
@@ -781,9 +992,7 @@
     transition: border-color 0.3s;
   }
 
-  .booking-option.selected .booking-option-radio {
-    border-color: var(--signal);
-  }
+  .booking-option.selected .booking-option-radio { border-color: var(--signal); }
 
   .booking-option.selected .booking-option-radio::after {
     content: '';
@@ -906,7 +1115,7 @@
     border: 1px solid rgba(133,183,235,0.20);
     border-radius: 2px;
     font-size: 0.68rem;
-    color: var(--clarity);
+    color: var(--blueprint);
     cursor: pointer;
     transition: all 0.2s;
     font-weight: 400;
@@ -918,9 +1127,31 @@
     color: var(--mist);
   }
 
-  @media (max-width: 768px) {
-    .booking-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .booking-visual { display: none; }
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: var(--midnight);
+    text-align: center;
+    border-top: 1px solid rgba(133,183,235,0.08);
+  }
+
+  .cta-final .section-label { color: var(--blueprint); }
+
+  .cta-final-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 500;
+    color: var(--mist);
+    letter-spacing: 0.01em;
+    margin: 0.8rem auto 1rem;
+    max-width: 680px;
+    line-height: 1.15;
+  }
+
+  .cta-final-sub {
+    font-size: 0.88rem;
+    color: var(--clarity);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
   }
 
   /* ── FOOTER ── */
@@ -945,13 +1176,50 @@
     .nav-links { display: none; }
     .section { padding: 4rem 1.5rem; }
     .services-grid { grid-template-columns: 1fr; }
+    .problems-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .form-row { grid-template-columns: 1fr; }
-    .stats { gap: 1.8rem; }
-    .hero-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+    .team-card { grid-template-columns: 1fr; }
+    .team-photo-col { min-height: 300px; }
+    .team-photo-overlay { background: linear-gradient(to top, var(--surface-alt) 5%, transparent); }
+    .team-bio-col { padding: 2rem 1.5rem; }
+    .booking-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .booking-visual { display: none; }
+    .hero-title { font-size: clamp(2rem, 9vw, 3.2rem); }
+    .hero-sub { font-size: 0.9rem; }
   }
 </style>
+
+<!-- Schema markup FAQ + Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Equilibrium Ventures",
+      "url": "https://equilibriumventures.com",
+      "description": "Consultoría estratégica, SEO, SEM, desarrollo web y automatización para pequeñas empresas y emprendedores.",
+      "email": "equilibriumventures@gmail.com",
+      "founder": { "@type": "Person", "name": "Víctor Ibáñez" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué tipo de negocios pueden trabajar con Equilibrium Ventures?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajo con pequeñas empresas, pymes y emprendedores en cualquier sector que quieran mejorar su presencia digital, captar más clientes o digitalizar sus procesos." } },
+        { "@type": "Question", "name": "¿La primera consulta de 15 minutos es realmente gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, completamente gratuita y sin compromiso. Es una llamada para conocer tu situación y ver si puedo ayudarte." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta una consultoría?", "acceptedAnswer": { "@type": "Answer", "text": "La consulta inicial es gratuita. Las sesiones de consultoría estratégica parten desde 50 €/hora. Los proyectos de SEO, SEM, desarrollo web y automatización se presupuestan de forma personalizada." } },
+        { "@type": "Question", "name": "¿También ofreces servicios de SEO y Google Ads?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Ofrezco servicios de posicionamiento SEO y gestión de campañas SEM / Google Ads orientadas a generación de leads y conversión." } },
+        { "@type": "Question", "name": "¿Trabajas solo la estrategia o también la ejecución?", "acceptedAnswer": { "@type": "Answer", "text": "Las dos cosas. Puedo ayudarte a definir la estrategia y también acompañarte en la implementación y seguimiento." } },
+        { "@type": "Question", "name": "¿Puedes ayudar a automatizar procesos con inteligencia artificial?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Implemento soluciones de automatización e inteligencia artificial adaptadas a pequeñas empresas para ahorrar tiempo y mejorar la eficiencia operativa." } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -963,10 +1231,11 @@
   </div>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#equipo">Equipo</a></li>
-    <li><a href="#reserva">Reserva tu cita</a></li>
-    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    <li><a href="#reserva" class="nav-cta">Reserva consulta gratuita →</a></li>
   </ul>
 </nav>
 
@@ -982,87 +1251,253 @@
     </svg>
   </div>
 
-  <p class="hero-eyebrow">Equilibrium Ventures · Seed to Series B</p>
-  <h1 class="hero-title">Strategic clarity for founders<br>who build <em>to last.</em></h1>
-  <p class="hero-sub">Estrategia · Finanzas · Organización · Crecimiento</p>
+  <p class="hero-eyebrow">Consultor para pequeñas empresas y emprendedores</p>
+  <h1 class="hero-title">Consultoría, SEO, SEM y desarrollo web<br>para <em>hacer crecer tu negocio</em></h1>
+  <p class="hero-sub">Ayudo a pequeñas empresas y emprendedores a mejorar su presencia digital, captar más clientes y optimizar sus procesos mediante estrategia, tecnología e inteligencia artificial.</p>
   <div class="hero-btns">
-    <a class="btn-primary" href="#servicios">Ver servicios</a>
-    <a class="btn-secondary" href="#contacto">Hablar con nosotros</a>
-    <a class="btn-secondary" href="https://calendar.app.google/86fb66KXgwmcWJeb7" target="_blank" rel="noopener">Programa tu cita →</a>
+    <a class="btn-primary" href="#reserva">Reserva consulta gratuita de 15 min</a>
+    <a class="btn-secondary" href="#servicios">Ver servicios</a>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
+<!-- ── PROBLEMAS ── -->
+<div class="problems-wrap" id="problemas">
+  <section class="section">
+    <p class="section-label">¿Te identificas?</p>
+    <h2 class="section-title">¿Tu negocio necesita mejorar<br>su presencia digital o <em>crecer con más claridad</em>?</h2>
+
+    <div class="problems-grid">
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">Tu web existe pero no genera contactos ni clientes</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">No apareces en Google cuando buscan tus servicios</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">No sabes si invertir en SEO, SEM, web o automatización</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">Gestionas demasiados procesos de forma manual y poco eficiente</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">Quieres digitalizar tu negocio pero no sabes por dónde empezar</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">→</span>
+        <p class="problem-text">Necesitas apoyo estratégico sin contratar un equipo interno grande</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── SERVICIOS ── -->
 <section class="section" id="servicios">
   <p class="section-label">Servicios</p>
-  <h2 class="section-title">Lo que hacemos<br><em>por tu empresa</em></h2>
+  <h2 class="section-title">Servicios pensados para<br>ayudar a tu negocio a <em>crecer</em></h2>
 
   <div class="services-intro">
-    <p>Acompañamos a founders en etapas seed a Series B en cada fase de su desarrollo. Desde la definición de estrategia hasta la optimización operativa, frameworks accionables sin jerga corporativa.</p>
+    <p>En Equilibrium Ventures ofrezco consultoría y soluciones prácticas para empresas y emprendedores que quieren mejorar su captación de clientes, digitalizar procesos y tomar mejores decisiones de negocio. Sin jerga corporativa. Directo al problema, directo a la solución.</p>
   </div>
 
   <div class="services-grid">
 
     <div class="service-card">
       <span class="service-num">01</span>
-      <h3 class="service-title">Estrategia Empresarial</h3>
-      <p class="service-desc">Diseñamos el rumbo de tu negocio. Analizamos tu mercado, identificamos oportunidades y construimos un plan de acción claro y realista para alcanzar tus objetivos.</p>
+      <h3 class="service-title">Consultoría estratégica</h3>
+      <p class="service-desc">Para emprendedores y empresas que necesitan claridad, enfoque y decisiones prácticas para crecer. Definimos prioridades, resolvemos bloqueos y construimos un plan de acción concreto.</p>
+      <p class="service-benefit">→ Más claridad, menos tiempo perdido en lo que no importa</p>
     </div>
 
     <div class="service-card">
       <span class="service-num">02</span>
-      <h3 class="service-title">Planificación Financiera</h3>
-      <p class="service-desc">Ordena tus finanzas y toma decisiones con seguridad. Te ayudamos con presupuestos, control de costes, flujo de caja y la planificación necesaria para crecer con solidez.</p>
+      <h3 class="service-title">SEO para pequeñas empresas</h3>
+      <p class="service-desc">Optimización web y de contenidos para mejorar tu visibilidad en Google y captar tráfico cualificado. Estrategia de posicionamiento adaptada a negocios locales y pymes.</p>
+      <p class="service-benefit">→ Más visibilidad en Google, más contactos orgánicos</p>
     </div>
 
     <div class="service-card">
       <span class="service-num">03</span>
-      <h3 class="service-title">Gestión y Organización</h3>
-      <p class="service-desc">Implementamos sistemas y procesos que te permiten trabajar de forma más eficiente. Desde la estructura interna hasta la gestión del equipo y los recursos.</p>
+      <h3 class="service-title">SEM y campañas de anuncios</h3>
+      <p class="service-desc">Creación y gestión de campañas de Google Ads enfocadas en generación de leads, captación de clientes y rentabilidad. Cada euro invertido, orientado a resultados concretos.</p>
+      <p class="service-benefit">→ Más clientes potenciales, mejor retorno de inversión</p>
     </div>
 
     <div class="service-card">
       <span class="service-num">04</span>
-      <h3 class="service-title">Desarrollo de Negocio</h3>
-      <p class="service-desc">Abrimos nuevas vías de ingresos y mercados. Identificamos alianzas, canales de venta y modelos de negocio que potencien tu crecimiento a largo plazo.</p>
+      <h3 class="service-title">Diseño y desarrollo web</h3>
+      <p class="service-desc">Páginas web orientadas a negocio: rápidas, bien posicionadas y diseñadas para convertir visitas en contactos. Creación desde cero o mejora de webs existentes.</p>
+      <p class="service-benefit">→ Una web que trabaja para ti, no solo para lucir bien</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-num">05</span>
+      <h3 class="service-title">Automatización e Inteligencia Artificial</h3>
+      <p class="service-desc">Implementación de sistemas para mejorar procesos, atención al cliente, análisis y productividad. Soluciones de IA aplicadas a la realidad de pequeñas empresas.</p>
+      <p class="service-benefit">→ Más tiempo, menos tareas manuales, más eficiencia</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-num">06</span>
+      <h3 class="service-title">Soporte continuo y gestión</h3>
+      <p class="service-desc">Seguimiento, mejoras y evolución de tu estrategia digital. Acompañamiento mensual para empresas que quieren crecer de forma sostenida con un advisor de confianza.</p>
+      <p class="service-benefit">→ Un experto en tu equipo sin contratarlo internamente</p>
     </div>
 
   </div>
+
+  <div class="services-cta">
+    <a class="btn-primary" href="#reserva">Solicitar consulta gratuita</a>
+    <a class="btn-secondary" href="#proceso">Ver cómo trabajo</a>
+  </div>
 </section>
 
-<!-- ── ABOUT ── -->
-<div class="about-wrap" id="nosotros">
+<!-- ── PROCESO ── -->
+<div class="process-wrap" id="proceso">
   <section class="section">
-    <div class="about-grid">
+    <p class="section-label">Proceso</p>
+    <h2 class="section-title">Un proceso simple, claro<br>y orientado a <em>resultados</em></h2>
 
-      <div class="about-visual">
-        <div class="about-card">
-          <p class="about-card-label">Nuestra filosofía</p>
-          <h3 class="about-card-title">Equilibrio entre visión y ejecución</h3>
-          <p class="about-card-text">Creemos que toda empresa, sin importar su tamaño, merece acceder a asesoría de calidad. Nuestro enfoque combina el rigor analítico con la cercanía y la practicidad que los founders realmente necesitan.</p>
-          <div class="about-card-accent"></div>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Consulta gratuita de 15 minutos</h3>
+        <p class="step-desc">Analizamos tu situación, tus objetivos y tus necesidades. Sin compromiso, sin coste.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Diagnóstico de tu negocio</h3>
+        <p class="step-desc">Estudiamos tu empresa con más profundidad y definimos claramente las prioridades y oportunidades.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Plan de acción</h3>
+        <p class="step-desc">Propongo una estrategia clara y accionable: web, SEO, SEM, automatización, IA o escalado de negocio.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3 class="step-title">Implementación y seguimiento</h3>
+        <p class="step-desc">Si lo necesitas, también puedo ayudarte a ejecutar, gestionar y hacer seguimiento de la solución.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── PRECIOS ── -->
+<div class="pricing-wrap" id="precios">
+  <section class="section">
+    <p class="section-label">Precios</p>
+    <h2 class="section-title">Opciones de <em>trabajo</em></h2>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <p class="pricing-badge">Para empezar</p>
+        <div class="pricing-price">Gratis</div>
+        <p class="pricing-unit">Consulta inicial · 15 minutos</p>
+        <p class="pricing-desc">Una primera llamada para conocer tu negocio, tu situación actual y ver si puedo ayudarte. Sin compromiso.</p>
+        <a class="btn-primary" href="#reserva">Reservar ahora</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <p class="pricing-badge">Más solicitado</p>
+        <div class="pricing-price">50 €</div>
+        <p class="pricing-unit">por hora · Consultoría estratégica</p>
+        <p class="pricing-desc">Sesiones de trabajo enfocadas a resolver dudas, definir prioridades y construir un plan de acción concreto para tu negocio.</p>
+        <a class="btn-primary" href="#reserva" style="background:var(--signal)">Solicitar sesión</a>
+      </div>
+
+      <div class="pricing-card">
+        <p class="pricing-badge">Proyectos personalizados</p>
+        <div class="pricing-price">A medida</div>
+        <p class="pricing-unit">Presupuesto personalizado</p>
+        <p class="pricing-desc">SEO, SEM, desarrollo web, automatización, inteligencia artificial y soporte continuo adaptados a las necesidades de tu proyecto.</p>
+        <a class="btn-secondary" href="#contacto">Solicitar presupuesto</a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ── FAQ ── -->
+<div class="faq-wrap" id="faq">
+  <section class="section">
+    <p class="section-label">Preguntas frecuentes</p>
+    <h2 class="section-title">Todo lo que necesitas<br><em>saber antes de empezar</em></h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿Qué tipo de negocios pueden trabajar con Equilibrium Ventures?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Trabajo con pequeñas empresas, pymes y emprendedores de cualquier sector. Desde negocios locales hasta tiendas online o empresas de servicios. Si quieres mejorar tu presencia digital, captar más clientes o digitalizar procesos, puedo ayudarte.</div>
         </div>
       </div>
 
-      <div class="about-text">
-        <p class="section-label">Nosotros</p>
-        <h2 class="section-title" style="margin-bottom:1rem">Una holding al<br><em>servicio de tu éxito</em></h2>
-        <div class="divider"></div>
-        <p>Equilibrium Ventures es una empresa holding especializada en asesoría estratégica para founders. Nacemos con el objetivo de democratizar el acceso a consultoría de alto nivel, ofreciendo frameworks accionables adaptados a la realidad de cada negocio.</p>
-        <p>Nuestro equipo multidisciplinar combina experiencia en finanzas, gestión empresarial y desarrollo de negocio para ofrecer una visión integral, práctica y orientada a resultados tangibles.</p>
-        <div class="stats">
-          <div>
-            <div class="stat-num">+50</div>
-            <div class="stat-label">Founders asesorados</div>
-          </div>
-          <div>
-            <div class="stat-num">360°</div>
-            <div class="stat-label">Visión empresarial</div>
-          </div>
-          <div>
-            <div class="stat-num">100%</div>
-            <div class="stat-label">Orientado a resultados</div>
-          </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿La primera consulta de 15 minutos es realmente gratuita?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sí, completamente gratuita y sin compromiso. Es una llamada breve para conocer tu situación, entender qué necesitas y valorar juntos si puedo ayudarte. Si no encajamos, te lo digo con honestidad.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿Cuánto cuesta una consultoría con Equilibrium Ventures?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">La consulta inicial es gratuita. Las sesiones de consultoría estratégica parten desde 50 €/hora. Los proyectos de SEO, SEM, desarrollo web o automatización se presupuestan de forma personalizada según el alcance y las necesidades.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿También ofreces servicios de SEO y Google Ads?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sí. Ofrezco servicios de posicionamiento SEO (técnico, on-page y estrategia de contenidos) y gestión de campañas SEM / Google Ads orientadas a generación de leads y conversión para pequeñas empresas.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿Trabajas solo la estrategia o también la ejecución?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Las dos cosas. Puedo ayudarte a definir la estrategia y también acompañarte en la implementación, gestión y seguimiento. El nivel de implicación lo decidimos juntos según lo que más te convenga.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿Puedes ayudar a automatizar procesos con inteligencia artificial?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Sí. Implemento soluciones de automatización e inteligencia artificial adaptadas a la realidad de pequeñas empresas: desde automatizar tareas repetitivas hasta mejorar la atención al cliente o el análisis de datos.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">¿Cuánto tarda normalmente un proyecto?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Depende del tipo de proyecto. Una sesión de consultoría puede resolverse en pocas horas. Un proyecto de SEO o desarrollo web puede durar entre 4 y 12 semanas. Lo definimos con claridad antes de empezar.</div>
         </div>
       </div>
 
@@ -1070,30 +1505,63 @@
   </section>
 </div>
 
-<!-- ── TEAM ── -->
+<!-- ── NOSOTROS / CREDIBILIDAD ── -->
+<div class="about-wrap" id="nosotros">
+  <section class="section">
+    <div class="about-grid">
+
+      <div class="about-visual">
+        <div class="about-card">
+          <p class="about-card-label">Qué me diferencia</p>
+          <h3 class="about-card-title">Una visión práctica, estratégica y orientada al crecimiento</h3>
+          <p class="about-card-text">No soy una gran consultora. Soy alguien que entiende los problemas reales de los negocios porque los ha vivido en primera persona. Trabajo contigo, no para ti.</p>
+          <div class="about-card-accent"></div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="section-label">Por qué Equilibrium</p>
+        <h2 class="section-title" style="margin-bottom:1rem">Soluciones realistas,<br>no <em>teóricas</em></h2>
+        <div class="divider"></div>
+        <p>Tu cliente ideal probablemente no busca una gran agencia. Busca a alguien que entienda su negocio, le explique las cosas con claridad y proponga soluciones concretas que se puedan ejecutar.</p>
+
+        <div class="differentials">
+          <div class="differential-item">Visión estratégica y tecnológica combinadas</div>
+          <div class="differential-item">Capacidad de aterrizar ideas en acciones concretas</div>
+          <div class="differential-item">Acompañamiento personalizado y cercano</div>
+          <div class="differential-item">Enfoque realista adaptado a pequeños negocios y pymes</div>
+          <div class="differential-item">Integración de marketing, tecnología e inteligencia artificial</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ── EQUIPO ── -->
 <div class="team-wrap" id="equipo">
   <section class="section">
-    <p class="section-label">Nuestro equipo</p>
-    <h2 class="section-title" style="margin-bottom:2.5rem">La persona detrás<br>de <em>Equilibrium</em></h2>
+    <p class="section-label">Quién hay detrás</p>
+    <h2 class="section-title" style="margin-bottom:2.5rem">Víctor Ibáñez,<br><em>Founder &amp; Strategic Advisor</em></h2>
 
     <div class="team-card">
       <div class="team-photo-col">
-        <img src="images/Victor.jpeg" alt="Víctor Ibáñez — Founder & Strategic Advisor">
+        <img src="images/Victor.jpeg" alt="Víctor Ibáñez — consultor estratégico para pequeñas empresas y emprendedores">
         <div class="team-photo-overlay"></div>
         <div class="team-photo-accent"></div>
       </div>
       <div class="team-bio-col">
         <h3 class="team-name">Víctor Ibáñez</h3>
         <p class="team-role">Founder &amp; Strategic Advisor · Equilibrium Ventures</p>
-        <p class="team-bio">Emprendedor con 26 años y una trayectoria que demuestra que la claridad estratégica no se mide en décadas. Desde el inicio de su carrera ha ocupado posiciones de liderazgo ejecutivo y gobierno corporativo, desarrollando un conocimiento transversal que aplica directamente con los founders que trabajan con Equilibrium Ventures.</p>
-        <p class="team-bio" style="margin-top:0.9rem">En 2023 cofundó TicketGo OÜ, un marketplace turístico donde ejerce como socio fundador y miembro de la junta directiva. Construir una empresa operativa desde cero define su enfoque como asesor: práctico, directo y orientado a resultados concretos.</p>
+        <p class="team-bio">Emprendedor con 26 años y una trayectoria que demuestra que la claridad estratégica no se mide en décadas. Ha ocupado posiciones de liderazgo ejecutivo y gobierno corporativo, desarrollando experiencia transversal en estrategia de go-to-market, estructuras de financiación, gobernanza corporativa y marketing de crecimiento.</p>
+        <p class="team-bio" style="margin-top:0.9rem">En 2023 cofundó TicketGo OÜ, un marketplace turístico donde ejerce como socio fundador y miembro de la junta directiva. Construir una empresa desde cero define su enfoque: práctico, directo y orientado a resultados concretos. Entiende los problemas de los negocios porque los ha vivido en primera persona.</p>
         <div class="team-tags">
           <span class="team-tag">Estrategia</span>
+          <span class="team-tag">SEO &amp; SEM</span>
           <span class="team-tag">Marketing</span>
           <span class="team-tag">Finanzas</span>
-          <span class="team-tag">Gobernanza corporativa</span>
-          <span class="team-tag">Recursos humanos</span>
-          <span class="team-tag">Operaciones</span>
+          <span class="team-tag">Automatización e IA</span>
+          <span class="team-tag">Desarrollo web</span>
         </div>
         <div class="team-venture">
           <span class="team-venture-label">Co-fundador de</span>
@@ -1104,107 +1572,47 @@
   </section>
 </div>
 
-<!-- ── CONTACT ── -->
-<div class="contact-wrap" id="contacto">
-  <section class="section">
-    <div class="contact-grid">
-
-      <div class="contact-info">
-        <p class="section-label">Contacto</p>
-        <h2 class="section-title">Hablemos de<br><em>tu negocio</em></h2>
-        <div class="divider"></div>
-        <p>Cuéntanos en qué punto está tu empresa y qué quieres conseguir. La primera consulta es sin compromiso.</p>
-        <div class="contact-detail">
-          <div class="contact-detail-item">
-            <span class="detail-label">Email</span>
-            <span class="detail-value">equilibriumventures@gmail.com</span>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Nombre</label>
-            <input class="form-input" type="text" placeholder="Tu nombre" id="nombre">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input class="form-input" type="email" placeholder="tu@email.com" id="email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Tipo de consulta</label>
-          <select class="form-select" id="tipo">
-            <option value="" disabled selected>Selecciona...</option>
-            <option>Estrategia empresarial</option>
-            <option>Planificación financiera</option>
-            <option>Gestión y organización</option>
-            <option>Desarrollo de negocio</option>
-            <option>Consulta general</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Mensaje</label>
-          <textarea class="form-textarea" placeholder="Cuéntanos sobre tu empresa, tus retos y lo que buscas conseguir..." id="mensaje"></textarea>
-        </div>
-        <button class="btn-submit" onclick="enviarFormulario()">
-          Enviar consulta <span>→</span>
-        </button>
-        <div class="success-msg" id="success">
-          Mensaje recibido — nos pondremos en contacto contigo en breve.
-        </div>
-      </div>
-
-    </div>
-  </section>
-</div>
-
-<!-- ── BOOKING ── -->
+<!-- ── RESERVA ── -->
 <div class="booking-wrap" id="reserva">
   <section class="section">
     <div class="booking-grid">
 
       <div>
         <p class="section-label">Agenda</p>
-        <h2 class="section-title">Reserva<br>tu <em>cita</em></h2>
+        <h2 class="section-title">Reserva una consulta<br><em>gratuita de 15 minutos</em></h2>
         <div class="divider"></div>
-        <p style="font-size:0.85rem;line-height:1.9;color:var(--text-secondary);font-weight:400;max-width:420px;color:var(--text-secondary)">
-          Elige el tipo de sesión que mejor se adapta a tu situación. La primera llamada de diagnóstico es gratuita y sin compromiso.
+        <p style="font-size:0.85rem;line-height:1.9;color:var(--text-secondary);font-weight:400;max-width:420px">
+          Cuéntame brevemente tu negocio, tu situación actual y qué necesitas mejorar. En esta primera llamada valoraremos si puedo ayudarte y cuál sería el siguiente paso más útil para ti.
         </p>
 
         <div class="booking-options" id="bookingOptions">
-          <div class="booking-option selected" onclick="selectOption(this, 'Diagnóstico inicial · 30 min · Gratuito')">
+          <div class="booking-option selected" onclick="selectOption(this, 'Diagnóstico inicial · 15 min · Gratuito')">
             <div class="booking-option-icon">◈</div>
             <div class="booking-option-info">
               <div class="booking-option-title">Diagnóstico inicial</div>
-              <div class="booking-option-meta">30 min · Gratuito</div>
+              <div class="booking-option-meta">15 min · Gratuito · Sin compromiso</div>
             </div>
             <div class="booking-option-radio"></div>
           </div>
-          <div class="booking-option" onclick="selectOption(this, 'Sesión estratégica · 60 min')">
+          <div class="booking-option" onclick="selectOption(this, 'Sesión estratégica · 60 min · desde 50€')">
             <div class="booking-option-icon">◇</div>
             <div class="booking-option-info">
               <div class="booking-option-title">Sesión estratégica</div>
-              <div class="booking-option-meta">60 min · Consultoría</div>
+              <div class="booking-option-meta">60 min · Desde 50 €/hora</div>
             </div>
             <div class="booking-option-radio"></div>
           </div>
-          <div class="booking-option" onclick="selectOption(this, 'Revisión financiera · 90 min')">
+          <div class="booking-option" onclick="selectOption(this, 'Consulta de proyecto · 90 min')">
             <div class="booking-option-icon">◉</div>
             <div class="booking-option-info">
-              <div class="booking-option-title">Revisión financiera</div>
-              <div class="booking-option-meta">90 min · Deep dive</div>
+              <div class="booking-option-title">Consulta de proyecto</div>
+              <div class="booking-option-meta">90 min · Presupuesto personalizado</div>
             </div>
             <div class="booking-option-radio"></div>
           </div>
         </div>
 
         <div class="booking-cta">
-          <!--
-            INSTRUCCIONES: Sustituye el href por tu enlace de Google Calendar Appointment Scheduling.
-            Pasos: Google Calendar → Crear → Programación de citas → Copia el enlace de reserva.
-          -->
           <a class="btn-primary" id="bookingBtn"
              href="https://calendar.app.google/86fb66KXgwmcWJeb7"
              target="_blank" rel="noopener"
@@ -1242,11 +1650,83 @@
   </section>
 </div>
 
+<!-- ── CTA FINAL ── -->
+<div class="cta-final">
+  <section class="section" style="text-align:center">
+    <p class="section-label">¿Hablamos?</p>
+    <h2 class="cta-final-title">¿Quieres mejorar tu negocio con una estrategia digital clara y enfocada a resultados?</h2>
+    <p class="cta-final-sub">Reserva una consulta gratuita de 15 minutos y cuéntame tu caso.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn-primary" href="https://calendar.app.google/86fb66KXgwmcWJeb7" target="_blank" rel="noopener">Reservar consulta gratuita →</a>
+      <a class="btn-secondary" href="#contacto">Enviar un mensaje</a>
+    </div>
+  </section>
+</div>
+
+<!-- ── CONTACTO ── -->
+<div class="contact-wrap" id="contacto">
+  <section class="section">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Hablemos de<br><em>tu negocio</em></h2>
+        <div class="divider"></div>
+        <p>Cuéntame en qué punto está tu empresa y qué quieres conseguir. Si prefieres escribir antes de reservar, aquí estoy.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">equilibriumventures@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-input" type="text" placeholder="Tu nombre" id="nombre">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="tu@email.com" id="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tipo de consulta</label>
+          <select class="form-select" id="tipo">
+            <option value="" disabled selected>Selecciona...</option>
+            <option>Consultoría estratégica</option>
+            <option>SEO para mi negocio</option>
+            <option>SEM / Google Ads</option>
+            <option>Diseño y desarrollo web</option>
+            <option>Automatización e IA</option>
+            <option>Soporte continuo</option>
+            <option>Otra consulta</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cuéntame tu situación</label>
+          <textarea class="form-textarea" placeholder="¿En qué punto está tu negocio? ¿Qué quieres mejorar o conseguir?" id="mensaje"></textarea>
+        </div>
+        <button class="btn-submit" onclick="enviarFormulario()">
+          Enviar mensaje <span>→</span>
+        </button>
+        <div class="success-msg" id="success">
+          Mensaje recibido — me pondré en contacto contigo en breve.
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
 <footer>
-  <p>© 2026 Equilibrium Ventures · Todos los derechos reservados</p>
+  <p>© 2026 Equilibrium Ventures · Consultoría estratégica, SEO, SEM y desarrollo web para negocios</p>
 </footer>
 
 <script>
+  /* Smooth scroll */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -1255,11 +1735,19 @@
     });
   });
 
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
   /* ── BOOKING CALENDAR ── */
   const GOOGLE_BOOKING_URL = 'https://calendar.app.google/86fb66KXgwmcWJeb7';
 
   let currentDate = new Date();
-  let selectedOption = 'Diagnóstico inicial · 30 min · Gratuito';
+  let selectedOption = 'Diagnóstico inicial · 15 min · Gratuito';
 
   function selectOption(el, label) {
     document.querySelectorAll('.booking-option').forEach(o => o.classList.remove('selected'));
@@ -1287,7 +1775,7 @@
     const today = new Date();
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
-    const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // Mon-start
+    const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
     document.getElementById('calMonthLabel').textContent = months[month] + ' ' + year;
@@ -1318,6 +1806,7 @@
 
   renderCalendar();
 
+  /* Contact form */
   function enviarFormulario() {
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
